@@ -25,8 +25,8 @@ utcTime = (datetime.datetime.utcnow() + datetime.timedelta(hours=8))
 cstTime = utcTime.strftime("%H时%M分%S秒")
 print("---------------")
 print(response.request.headers)
-print("---------------") #调试临时开启
-print(response.request.body) #调试临时开启
+#print("---------------") #调试临时开启
+#print(response.request.body) #调试临时开启
 print("---------------")
 print(response.text)
 #print("---------------")
