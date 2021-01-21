@@ -55,7 +55,7 @@ jobs:
         ${{secrets.TOKEN}}
         EOF
 
-    - name: AutoCheck
+    - name: AutoCheck2
       run: |
         python3 check2.py <<EOF
         ${{secrets.CUSTOMERID}}

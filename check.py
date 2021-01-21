@@ -46,7 +46,8 @@ print("---------------")
 # 时间戳
 time.time()
 print(time.time)
-print("pass,当前时间时间戳为%d" %(time.time))
+posttime = time.time()
+print("pass,当前时间时间戳为%d" %(posttime))
 print("---------------")
 
 
