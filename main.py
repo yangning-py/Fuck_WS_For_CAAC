@@ -199,7 +199,6 @@ jsons = {
         "token": TOKEN
         }
     }
-}
 
 #json体2
 jsons2 = {
