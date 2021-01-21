@@ -15,7 +15,7 @@ headers = {
 
 #json体2
 jsons = {
-    customerId= CUSTOMERID
+    "customerId": CUSTOMERID
 }
 
 # POST打卡数据
