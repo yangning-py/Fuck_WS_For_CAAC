@@ -61,7 +61,7 @@ sign_url1 = "https://reportedh5.17wanxiao.com/sass/api/epmpics"
 sign_url2 = "https://reportedh5.17wanxiao.com/api/remind/openRemind"
 
 headers = {
-    'User-Agent': 'Chrome/87.0.4280.101 Mobile Wanxiao/5.1.5'
+    'User-Agent': 'Chrome/87.0.4280.101 Mobile Wanxiao/5.1.5',
 	'Content-Type': 'application/json',
 	'Accept-Encoding': 'gzip, deflate'
 }
