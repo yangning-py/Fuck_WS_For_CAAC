@@ -1,0 +1,134 @@
+{
+    "businessType":"epmpics",
+    "method":"submitUpInfo",
+    "jsonData":
+    {
+        "deptStr": //学籍信息
+        {
+            "deptid": DEPTID, //专业代码
+            "text": DEPTTEXT //学院-专业-班级
+        },
+        "areaStr": //地址信息
+        {
+            "street": STREET, //打卡位置所在道路
+            "district": DISTRICT, //打卡位置所在区县
+            "city": CITY, //打卡位置所在市
+            "province": PROVINCE, //打卡位置所在省份
+            "pois": POIS, //打卡位置所在小区
+            //以上信息建议正常打卡时截图记录，具体见README.MD
+            "lng": LNG, //打卡位置所在纬度
+            "lat": LAT, //打卡位置所在经度
+            //以上信息建议用手机指南针或者卫星地图获取
+            "address": DISTRICT|STREET|POIS,
+            "text": PROVINCE-CITY
+        },
+        "reportdate":time.time, //时间戳
+        "customerid": CUSTOMERID, //用途不明
+        "deptid": DEPTID,
+        "source":"app", //打卡请求来源
+        "stuNo": STUNO, // 学号/工号
+        "username": USERNAME, //姓名
+        "phonenum": PHONENUM, //本人电话
+        "userid": USERID, //完美校园账号编号
+        "updatainfo":[ //打卡信息选项*注:选项内容需要完全按照打卡选项填写，包括A./B./C.
+        {
+            "propertyname":"age",
+            "value": AGE //年龄
+        },
+        {
+            "propertyname":"name",
+            "value": USERNAME
+        },
+        {
+            "propertyname":"jtdz",
+            "value": BASEPROVINCE //家乡省份
+        },
+        {
+            "propertyname":"levorgodata",
+            "value": BASECITY //家乡城市
+        },
+        {
+            "propertyname":"备注",
+            "value": BASEAREA //家乡区县
+        },
+        {
+            "propertyname":"返回及到达时间",
+            "value": BASEADDR //家乡详细地址
+        },
+        {
+            "propertyname":"ownPhone",
+            "value": PHONENUM
+        },
+        {
+            "propertyname":"jtcy",
+            "value": "否"
+        },
+        {
+            "propertyname":"medicalObservation",
+            "value": SCHOOLPOIS //学生所在校区
+        },
+        {
+            "propertyname":"isGoWarningAdress",
+            "value": "B.否"
+        },
+        {
+            "propertyname":"isTouch",
+            "value": "B.否"
+        },
+        {
+            "propertyname":"ishborwh",
+            "value": "B.否"
+        },
+        {
+            "propertyname":"isis",
+            "value":"B.否"
+        },
+        {
+            "propertyname":"isleaveaddress",
+            "value":"B.否"
+        },
+        {
+            "propertyname":"tjjw0511",
+            "value":"否"
+        },
+        {
+            "propertyname":"medicalObservation1",
+            "value":"B.否"
+        },
+        {
+            "propertyname":"ownbodyzk",
+            "value": WORK //实习确认 (A.是/B.否)
+        },
+        {
+            "propertyname":"isConfirmed",
+            "value":"A.从未有过居家观察"
+        },
+        {
+            "propertyname":"cxjh",
+            "value":"A.从未有过集中观察"
+        },
+        {
+            "propertyname":"fhhb",
+            "value":"健康"
+        },
+        {
+            "propertyname":"symptom",
+            "value":"A.无症状"
+        },
+        {
+            "propertyname":"sex",
+            "value":"B.否"
+        },
+        {
+            "propertyname":"xinqing",
+            "value":"B.否"
+        },
+        {
+            "propertyname":"isAlreadyInSchool",
+            "value":"B.否"
+        }
+        ],
+        "gpsType":1, //GPS信息类型
+        "token": TOKEN
+        }
+    }
