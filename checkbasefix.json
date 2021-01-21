@@ -26,6 +26,7 @@
         "customerid": CUSTOMERID, //用途不明
         "deptid": DEPTID,
         "source":"app", //打卡请求来源
+        "templatedid":"pneumonia", //打卡模式
         "stuNo": STUNO, // 学号/工号
         "username": USERNAME, //姓名
         "phonenum": PHONENUM, //本人电话

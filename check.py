@@ -93,7 +93,7 @@ jsons = {
         "customerid": CUSTOMERID,
         "deptid": DEPTID,
         "source":"app",
-        "templatedid":"pneumonia",
+        "templateid":"pneumonia",
         "stuNo": STUNO,
         "username": USERNAME,
         "phonenum": PHONENUM,
