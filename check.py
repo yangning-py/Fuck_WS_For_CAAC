@@ -57,11 +57,10 @@ print("pass,本次打卡使用体温为：%d" %(temperature))
 print("---------------")
 
 # 全局设置
-sign_url1 = "https://reportedh5.17wanxiao.com/sass/api/epmpics"
-sign_url2 = "https://reportedh5.17wanxiao.com/api/remind/openRemind"
+sign_url = "https://reportedh5.17wanxiao.com/sass/api/epmpics"
 
 headers = {
-    'User-Agent': 'Chrome/87.0.4280.101 Mobile Wanxiao/5.1.5'
+    'User-Agent': 'Chrome/87.0.4280.101 Mobile Wanxiao/5.1.5',
 	'Content-Type': 'application/json',
 	'Accept-Encoding': 'gzip, deflate'
 }
@@ -199,15 +198,9 @@ jsons = {
         "token": TOKEN
         }
     }
-}
 
-#json体2
-jsons2 = {
-    customerId=CUSTOMERID
-}
-
-# POST打卡数据阶段1
-response = requests.post(sign_url1, json=jsons, headers=headers)
+# POST打卡数据
+response = requests.post(sign_url, json=jsons, headers=headers)
 utcTime = (datetime.datetime.utcnow() + datetime.timedelta(hours=8))
 cstTime = utcTime.strftime("%H时%M分%S秒")
 print("---------------")
@@ -219,25 +212,6 @@ print(response.text)
 #print("---------------")
 
 # 阶段1打卡情况判断
-if response.json()["msg"] == '成功':
-    msg = cstTime + "打卡成功"
-else:
-    msg = cstTime + "打卡异常"
-print(msg)
-
-# POST打卡数据阶段2
-response = requests.post(sign_url2, json=jsons2, headers=headers)
-utcTime = (datetime.datetime.utcnow() + datetime.timedelta(hours=8))
-cstTime = utcTime.strftime("%H时%M分%S秒")
-print("---------------")
-print(response.request.headers)
-print("---------------") #调试临时开启
-print(response.request.body) #调试临时开启
-print("---------------")
-print(response.text)
-#print("---------------")
-
-## 阶段2打卡情况判断
 if response.json()["msg"] == '成功':
     msg = cstTime + "打卡成功"
 else:

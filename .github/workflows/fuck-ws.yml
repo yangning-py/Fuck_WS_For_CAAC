@@ -28,7 +28,7 @@ jobs:
         
     - name: AutoCheck
       run: |
-        python3 main.py <<EOF
+        python3 check.py <<EOF
         ${{secrets.DEPTID}}
         ${{secrets.DEPTTEXT}}
         ${{secrets.STREET}}
@@ -53,4 +53,10 @@ jobs:
         ${{secrets.SCHOOLPOIS}}
         ${{secrets.WORK}}
         ${{secrets.TOKEN}}
+        EOF
+
+    - name: AutoCheck
+      run: |
+        python3 check2.py <<EOF
+        ${{secrets.CUSTOMERID}}
         EOF
