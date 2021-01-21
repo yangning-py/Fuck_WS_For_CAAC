@@ -1,0 +1,56 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: F**K-ws
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: 16 05 * * *
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: Install dependencies
+      run: |
+        pip3 install requests
+        
+    - name: AutoCheck
+      run: |
+        python3 main.py <<EOF
+        ${{secrets.DEPTID}}
+        ${{secrets.DEPTTEXT}}
+        ${{secrets.STREET}}
+        ${{secrets.DISTRICT}}
+        ${{secrets.CITY}}
+        ${{secrets.PROVINCE}}
+        ${{secrets.POIS}}
+        ${{secrets.LNG}}
+        ${{secrets.LAT}}
+        ${{secrets.ADDRESS}}
+        ${{secrets.ADDRTEXT}}
+        ${{secrets.CUSTOMERID}}
+        ${{secrets.STUNO}}
+        ${{secrets.USERNAME}}
+        ${{secrets.PHONENUM}}
+        ${{secrets.USERID}}
+        ${{secrets.AGE}}
+        ${{secrets.BASEPROVINCE}}
+        ${{secrets.BASECITY}}
+        ${{secrets.BASEAREA}}
+        ${{secrets.BASEADDR}}
+        ${{secrets.SCHOOLPOIS}}
+        ${{secrets.WORK}}
+        ${{secrets.TOKEN}}
+        EOF
