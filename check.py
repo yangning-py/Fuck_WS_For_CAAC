@@ -89,7 +89,7 @@ jsons = {
             "address": ADDRESS,
             "text": ADDRTEXT
         },
-        "reportdate":time.time,
+        "reportdate": posttime,
         "customerid": CUSTOMERID,
         "deptid": DEPTID,
         "source":"app",
